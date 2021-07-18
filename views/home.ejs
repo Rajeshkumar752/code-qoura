@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+    <title>Home</title>
+</head>
+
+<body>
+
+
+    <!-- NAVBAR SECTION  -->
+
+    <nav style="z-index: 2; position: fixed; width: 100%; top:0;" class="mynav navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <form method="GET" action="/home"><button type="submit"
+                    style="color: black; font-weight: bold; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"
+                    class="navbar-brand navhomebutton"> CODE_QOURA</button></form>
+            <form action="/user/profile" method="GET"><button type="submit" class="nav-button"><img style="margin-right: 10px; height: 28px;" src="/images/profile.png" />Me</button></form>
+        </div>
+    </nav>
+
+    <!-- NAVBAR ENDS  -->
+
+
+
+
+
+
+
+    <!-- MAIN SECTION  -->
+
+
+
+    <div style="margin: 80px auto; margin-bottom: 0px; " class="col-lg-11 row main">
+
+
+        <div style=" padding: 20px; display: flex; justify-content: center; flex-direction: column; margin-bottom: 0px; text-align: center;"
+            class="col-lg-4">
+
+            <p
+                style="font-size: 30px; text-align: left;  color: black; font-weight: bold; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                Have a Question ? <br> Then why to Keep in mind , Ask a community.
+            </p>
+
+            <div style="display: flex;">
+                <form style="text-align: left; width: fit-content;  " method="GET" action="question/create">
+                    <button type="submit" class="main-btn btn btn-lg btn-danger ask-question-btn"
+                        style=" margin: 20px 0px;
+                         text-align: left;  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Ask a Question</button>
+                </form>
+
+                <form style="text-align: left; width: fit-content; " action="/question/explore" method="GET">
+                    <button type="submit" class="main-btn btn btn-lg btn-primary ask-question-btn"
+                        style="  width: 100px; margin: 20px;
+               text-align: left;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Explore</button>
+                </form>
+            </div>
+
+
+        </div>
+
+        <div style="padding-left: 40px; padding: 20px; margin-bottom: 0px;  display: flex; justify-content: center; "
+            class="col-lg-8">
+            <img style="width: 70%;" src="/images/undraw_creative_team_r90h.svg" alt="">
+        </div>
+
+
+    </div>
+
+
+    <!-- MAIN SECTION ENDS  -->
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

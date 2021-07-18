@@ -1,0 +1,176 @@
+ /* ALL  */
+
+
+
+* {
+    outline:none;
+  }
+
+
+textarea{
+    font-size: 1.2rem;
+    height: 200px;
+    padding: 20px;  
+}
+  
+
+
+ /* LOGIN PAGE */
+
+ .login-box{
+    font-family:'Franklin Gothic ', 'Arial Narrow', Arial, sans-serif;
+    font-weight:bold;
+     padding: 10px;
+     border: 1px solid gray;
+     background-color: rgb(243, 237, 237);
+     border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+     border-bottom-left-radius: 20px;
+     border-top-right-radius: 20px;
+     box-shadow: 0px 0px 10px gray ,
+                 0px 0px 20px  gray
+     ;
+ }
+
+.login-holder{
+    margin: 50px auto;
+    padding: 20px;
+    font-family:'Franklin Gothic ', 'Arial Narrow', Arial, sans-serif;
+    font-weight:bold;
+}
+
+.login-form{
+    margin: 2px auto;
+    /* border: 2px solid grey; */
+    border-radius: 1%;
+    width: 80%;
+}
+
+
+input{
+    border: none;
+    /* background-color:rgb(241, 231, 231); */
+    background-color: white;
+    border-radius: 20px;
+    margin: 12px;
+    margin-left: 0px;
+    width: 100%;
+    height: 30px;
+    padding: 15px;
+}
+
+select{
+    width: 40%;
+    padding-left: 10px;
+    /* margin: 2px; */
+    height: 40px;
+    border:none;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 0px 2px gray ,
+                0px 0px 5px  gray
+    ;
+}
+
+
+
+
+           /* HOME PAGE  */
+
+
+.main-btn{
+    border:none;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.main{
+    height:85vh;
+}
+
+.apply-btn{
+
+    width:80px;
+    padding-left: 10px;
+    /* margin: 2px; */
+    height: 42px;
+    border:1px solid gray;
+    border-radius: 55px;
+}
+
+
+.navhomebutton{
+    border: none; background-color: transparent;
+}
+
+
+.mynav{
+   background-color:#00BFA6;
+}
+
+.nav-button{
+    background: transparent;
+    border: none;
+    font-size: 3 rem;;
+    font-weight: bold;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-right: 20px;
+    color:white;
+}
+
+.nav-button:hover{
+    transform: scale(1.02,1.02);
+}
+
+
+
+/* EXPLORE PAGE  */
+
+.questions-holder{
+    padding:10px; 
+    margin:80px auto;
+}
+
+.question{
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 20px;
+    transition: 0.2s;
+    word-spacing: 1px;
+    font-size:  1.1rem;
+}
+
+.question:hover{
+    transition: 0.4s;
+    transform: scale(1.03,1.03);
+}
+
+.ask-question-btn{
+    transition: 0.2s;
+}
+
+.ask-question-btn:hover{
+    transform: scale(1.1,1.1);
+    
+}
+
+
+  /* VIEW ANSWR PAGE  */
+
+  .answer{
+      margin: 20px auto;
+      padding: 10px;
+      font-family:Arial, Helvetica, sans-serif;
+  }
+
+
+  /* USER PROFILE PAGE  */
+
+  .profile-holder{
+    margin :70px auto;
+  }
+

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+    <title>Answered</title>
+</head>
+
+<body>
+
+
+    <nav style="z-index: 2; position: fixed; width: 100%; top:0;" class="mynav navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <form method="GET" action="/home"><button type="submit"
+                    style="color: black; font-weight: bold; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"
+                    class="navbar-brand navhomebutton">CODE_QOURA</button></form>
+            <form action="/user/profile" method="GET"><button type="submit" class="nav-button"><img
+                        style="margin-right: 10px; height: 28px;" src="/images/profile.png" />Me</button></form>
+        </div>
+    </nav>
+
+
+
+
+
+    <div style="margin-top: 100px; padding-left: 0px;" class="col-lg-8 answer ">
+        <button style="width: fit-content; margin: 16px auto;" type="button" class="btn btn-secondary apply-btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add Answer
+        </button>
+        <p style="font-size: 1.2rem; font-weight: bolder;">
+            <%=question%>
+        </p>
+
+    </div>
+
+
+
+
+    <% for(var i=0;i<answer.length;i++){ %>
+
+        <div class="col-lg-8  answer card question  ">
+
+
+            <form method="POST" action="/user/user_profile">
+                <button style=" font-size: 1.1 rem; margin:10px;" class="btn btn-outline-success" type="submit"
+                    name="authormail" value="<%=answer[i].authormail%>">
+                    <%=answer[i].author%>
+                </button>
+            </form>
+            <br>
+
+            <p style="font-size: 1.1 rem; margin-left: 10px;">
+                <%=answer[i].content%>
+            </p>
+
+            <form style="text-align: right;" method="POST" action="/answer/like"><button type="submit" name="id" ; value="<%=answer[i]._id%>"
+                    style="margin-left: 10px;" class="btn btn-primary"><img style="height: 20px;"
+                        src="/images/like (1).png" alt="">
+                    <%=answer[i].likes%>
+                </button></form>
+
+
+        </div>
+
+        <%}%>
+
+            <!-- <div id="write_answer" style="padding: 20px;" class="col-lg-6 login-holder">
+                <div style="text-align: center; margin: 20px;">
+                    <h1 style="font-weight: bold; font-family:'Courier New', Courier, monospace;">Add Answer</h1>
+                </div>
+
+                <form class="login-form" action="/submit_answer" method="POST">
+                    <textarea style="white-space: pre-wrap; width: 100%;  " name="answer"></textarea>
+                    <button value="<%=questionid%>" name="quid" type="submit" style="width: 100%; margin: 10px 0"
+                        class="btn  btn-success">Post</button>
+                </form>
+
+            </div> -->
+
+
+
+
+            
+
+            <!--ANSWER  Modal -->
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title" id="exampleModalLabel"
+                                style="font-weight: bold; font-family:'Courier New', Courier, monospace;">Add Answer
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="login-form" action="/answer/submit" method="POST">
+                                <textarea style=" width: 100%;  " name="answer"></textarea>
+                                <button value="<%=questionid%>" name="quid" type="submit"
+                                    style="width: 100%; margin: 10px 0" class="btn  btn-success">Post</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+                crossorigin="anonymous"></script>
+
+</body>
+
+</html>
